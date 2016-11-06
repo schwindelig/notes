@@ -1,0 +1,11 @@
+# add all modified files to staging
+git add -A
+
+# list modified files and their status
+git status
+
+# commit
+git commit
+
+# push to origin master
+git push origin master
