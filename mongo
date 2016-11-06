@@ -1,0 +1,5 @@
+# dropping a database
+use [database]
+db.dropDatabase();
+
+
