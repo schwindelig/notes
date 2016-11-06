@@ -1,0 +1,4 @@
+# switching to intel syntax in objdump
+objdump -M intel -D [filename]
+
+

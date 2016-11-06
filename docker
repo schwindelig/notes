@@ -1,0 +1,5 @@
+# list containers
+docker ps -a
+
+# run alpine (and start shell)
+docker run -it alpine /bin/ash
