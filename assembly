@@ -1,4 +1,71 @@
-# switching to intel syntax in objdump
+# misc
+man ascii		# will show the ascii table with the corresponding code
+printf "%x/n" 19	# will convert 19 to hex
+printf "%d/n" 0xa	# will convert 0x1 to dec
+pcalc			# programmer's calculator. displays results in dec,hex and binary 
+
+# objdump
+
+## switching to intel syntax in objdump
 objdump -M intel -D [filename]
 
+# GDB
 
+set disassembly-flavor intel	# sets disassembly flavor to intel syntax (alternative is "att")
+load [filename]			# load a file
+list				# list source lines (code)
+disassemble [function]		# disassembles a section of memory
+break main			# sets a breakpoint at main
+run				# runs the program
+info registers [register]	# show information about [register] (eg. eip or rip)
+i r [register]			# ditto
+nexti				# next instruction
+continue			# continue debugging (go to the next breakpoint)
+bt				# print backtrace
+
+## examine a memory address
+x/[format] [location or $register]	
+	formats:
+	o	octal
+	x	hex
+	u	unsigned, standard base 10
+	t	binary
+	s	string
+	i	instruction
+
+
+
+# GCC
+
+## compiling with debug information
+add flag -g
+
+# Registers
+## General purpose registers
+EAX	Accumulator
+ECX	Counter
+EDX	Data
+EBX	Base
+
+## Also general purpose registers, but also known pointers and indexes
+ESP	Stack Pointer		32bit address, pointing to location in memory
+EBP	Base Pointer		32bit address, pointing to location in memory
+ESI	Source Index		32bit address, pointing to source where data needs to be read from
+EDI	Destination Index	32bit address, pointing to destination where written to
+EIP	Instruction Pointer	Current instruction the processor is reading
+EFLAGS	Several bit flags used for comparisions and memory segmentation
+
+# Instructions (intel syntax)
+
+## general stuff
+mov	ebp,esp		# moves esp to ebp
+sub	esp,0x8		# subtracts 8 from esp (and stores result in esp)
+lea	eax,[ebp-4]	# load effective address, loads ebp-4 into eax
+inc	DWORD PTR [eax]	# increment eax by 1
+
+## comparision
+## the following compares a 4 byte value located at EBP-4 with 9. if it's less than or equal to 9
+## it will jump to 8048393, otherwise it will jump to 80483a6.
+cmp	DWORD PTR [ebp-4],0x9
+jle	8048393 <main+0x1f>
+jmp	80483a6 <main+0x32>

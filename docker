@@ -6,3 +6,15 @@ docker run -it alpine /bin/ash
 
 # show local images
 docker images
+
+# delete an image
+docker rmi -f [image]
+
+# delete a container
+docker rm [container]
+
+# show logs for a container
+docker logs [container]
+
+# show docker version
+docker version
