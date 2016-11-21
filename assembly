@@ -1,4 +1,4 @@
-# misc
+# misc tools and commands
 man ascii		# will show the ascii table with the corresponding code
 printf "%x/n" 19	# will convert 19 to hex
 printf "%d/n" 0xa	# will convert 0x1 to dec
@@ -22,6 +22,8 @@ i r [register]			# ditto
 nexti				# next instruction
 continue			# continue debugging (go to the next breakpoint)
 bt				# print backtrace
+bt full				# print backtrace and also the values of the local variables
+where				# print backtrace on error
 
 ## examine a memory address
 x/[format] [location or $register]	
@@ -69,3 +71,18 @@ inc	DWORD PTR [eax]	# increment eax by 1
 cmp	DWORD PTR [ebp-4],0x9
 jle	8048393 <main+0x1f>
 jmp	80483a6 <main+0x32>
+
+
+
+
+# memory segmentation
+
+## 5 segements:
+text aka code segment	fixed size	stores the assembled machine language instructions
+data			fixed size	stores the initialized global and static variables
+bss			fixed size	stores the uninitialized global and static variables
+heap			variable size	frame of memory that can be controlled directly by the programmer
+stack			variable size	stores local function variables and context during funcion calls
+
+## stack frame
+

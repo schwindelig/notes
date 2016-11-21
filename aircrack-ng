@@ -1,0 +1,7 @@
+# aireplay-ng
+
+## injection test
+aireplay-ng -9 [interface]
+
+## deauth
+aireplay-ng -0 1 -a [mac AP] -c [mac client]

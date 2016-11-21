@@ -18,3 +18,8 @@ docker logs [container]
 
 # show docker version
 docker version
+
+# delete all docker containers
+docker rm $(docker ps -aq)
+
+
