@@ -1,0 +1,2 @@
+# saving current iptables config using iptables-persistent
+iptables-save > /etc/iptables/rules.v4
