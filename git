@@ -9,3 +9,28 @@ git commit
 
 # push to origin master
 git push origin master
+
+
+# create a git repository
+git init
+
+# cloning an existing repository
+git clone [url]
+
+# show status of tracked files
+git status
+
+# show short status
+git status -s (or --short)
+
+# track new files / add changes to next commit
+git add [filename]
+
+# ignoring files
+add filenames or patterns to .gitignore file
+
+# show differences for unstaged files
+git diff
+
+# show differences for staged files
+git diff --staged (or --cached, both are synonyms)
