@@ -66,3 +66,52 @@ git reset [filename]
 
 # revert a changed file
 git checkout -- [filename]
+
+# show remotes of working directory (-v shows URLs)
+git remote -v
+
+# add a remote
+git remote add [shortname] [url]
+
+# difference between fetch and pull
+1) fetch will only download data, but not merge
+2) pull will fetch and try to merge the changes to the current working directory
+
+# fetching from remote
+git fetch [remote] (optional: [branch])
+
+# pulling from remote
+git pull [remote]
+
+# show additional information about remote
+git remote show [remote]
+
+# renaming a remote
+git remote rename [old remote name] [new name]
+
+# removing a remote
+git rm [remote]
+
+# list tags
+git tag
+
+# create annotated tag
+git tag -a [tag name] -m [message]
+
+# creating a lightweight tag
+git tag [tag name]
+
+# show tag data
+git show show [tag name]
+
+# tagging an existing commit
+git tag -a [tag-name] [commit checksum]
+
+# pushing a single tag to remote
+git push [remote] [tag name]
+
+# pushing all tags to remote
+git push [remote] --tags
+
+# checking out a tag
+git checkout -b [branchname] [tagname]
