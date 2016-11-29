@@ -5,11 +5,10 @@ git add -A
 git status
 
 # commit
-git commit
+git commit (-m for adding a message directly)
 
 # push to origin master
 git push origin master
-
 
 # create a git repository
 git init
@@ -34,3 +33,36 @@ git diff
 
 # show differences for staged files
 git diff --staged (or --cached, both are synonyms)
+
+# commit directly (skipping staging)
+git commit -a -m "[message]"
+
+# remove a file from working directy (this will also remove it from file system)
+git rm [filename]
+
+# remove a file from staging, but keep on file system and keep tracking
+git rm --cached [filename]
+
+# move (or rename) a file
+git mv [old path] [new path]
+
+# show commit history
+git log
+
+# show commit history with differences introduced in each commit
+git log -p
+
+# show short history (one line)
+git log --pretty=oneline
+
+# show log graph with ascii visualization
+git log --graph
+
+# change last commit (add or remove files, etc) and modify commit message
+git commit --amend -m "[message]"
+
+# unstage a file
+git reset [filename]
+
+# revert a changed file
+git checkout -- [filename]
