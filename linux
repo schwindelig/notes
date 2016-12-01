@@ -1,2 +1,5 @@
 # show disk usage
 df -h
+
+# show directory tree
+tree [path]

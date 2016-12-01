@@ -25,6 +25,12 @@ git status -s (or --short)
 # track new files / add changes to next commit
 git add [filename]
 
+# track new files, patch mode
+git add -p 
+
+# track new files, interactive mode
+git add -i
+
 # ignoring files
 add filenames or patterns to .gitignore file
 
@@ -115,3 +121,12 @@ git push [remote] --tags
 
 # checking out a tag
 git checkout -b [branchname] [tagname]
+
+# create a new branch (branch from current checked out)
+git branch [branch name]
+
+# delete a branch
+git branch -d [branch name]
+
+# run garbage collection
+git gc
