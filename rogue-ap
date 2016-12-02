@@ -1,0 +1,5 @@
+follow these instructions:
+http://blog.erratasec.com/2016/10/configuring-raspberry-pi-as-router.html?m=1
+
+most of it should work. however, instead of using his dhcp-client, i used dnsmasq.
+also, don't add the hostapd call to the network/interfaces configuration file

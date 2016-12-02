@@ -1,0 +1,2 @@
+# difference between DELETE FORM [TABLE] and TRUNCATE TABLE [table]:
+No rollback possible, since there is no transaction log

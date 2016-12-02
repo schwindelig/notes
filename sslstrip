@@ -1,5 +1,8 @@
 # route all traffic on port 80 to 8080
-iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+iptables -t nat -A PREROUTING -i wlan0 -p tcp --destination-port 80 -j REDIRECT --to-port 8080
 
 # show the chain
 iptables -t nat -L 
+
+# remove first nat entry from PREROUTING
+iptables -t nat -D PREROUTING 1

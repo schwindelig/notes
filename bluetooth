@@ -1,0 +1,19 @@
+# list local bluetooth devices
+hciconfig
+
+# start bluetooth device
+hciconfig [interface] up
+
+# scan for devices with hcitool
+hcitool scan
+
+# inquiring more information about devices
+hcitool inq
+
+# scan for services with spdtool (part of bluez suite)
+sdptool browser [mac-address]
+
+# ping device
+l2ping [mac-address]
+
+# 
