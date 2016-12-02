@@ -22,4 +22,8 @@ docker version
 # delete all docker containers
 docker rm $(docker ps -aq)
 
+# create a volume container
+docker create -v /shared-data --name shared-data-container alpine true
 
+# committing changes
+docker commit -m "<message>" [-a "<author>"] <container> <user>/<repo>:<label>
