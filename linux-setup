@@ -1,0 +1,6 @@
+# Notes for my linux setup
+
+## Installing vim with python2 support
+sudo apt-get install vim-nox-py2
+
+
