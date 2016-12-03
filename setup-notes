@@ -1,0 +1,11 @@
+# Setup script for Ubuntu
+
+## install bash-it
+git clone https://github.com/Bash-it/bash-it.git
+./bash-it/install.sh --interactive
+
+## install elementary terminal theme
+wget -O xt  http://git.io/v3D8R && chmod +x xt && ./xt && rm xt
+
+## install vim with python2 support
+sudo apt-get install vim-nox-py2
