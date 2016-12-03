@@ -1,3 +1,12 @@
+w		# next word
+$		# end of line
+0		# beginning of line
+H		# top of screen
+M		# middle of screen
+L		# bottom of screen
+ctrl-f		# next screen
+ctrl-b		# prev screen
+G		# end of file
 v		# toggle visual mode
 y		# copy selected text
 		# cut selected text
