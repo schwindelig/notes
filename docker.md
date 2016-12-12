@@ -26,6 +26,12 @@ docker run -d <image>
 docker images
 ```
 
+### Pull an image or repository
+
+```shell
+docker pull <image or repo>
+```
+
 ### Delete an image
 
 ```shell
