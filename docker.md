@@ -1,29 +1,83 @@
-# list containers
+# Docker
+
+## General stuff
+
+### List all containers
+
+```sh
 docker ps -a
+```
 
-# run alpine (and start shell)
+### Run Alpine (latest) and starting shell
+
+```shell
 docker run -it alpine /bin/ash
+```
 
-# show local images
+### Run Container in background
+
+```shell
+docker run -d <image>
+```
+
+### Show local images
+
+```shell
 docker images
+```
 
-# delete an image
-docker rmi -f [image]
+### Delete an image
 
-# delete a container
-docker rm [container]
+```shell
+docker rmi -f <image>
+```
 
-# show logs for a container
-docker logs [container]
+### Delete a container
 
-# show docker version
+```shell 
+docker rm <container>
+```
+
+### Show logs for a container
+
+```shell
+docker logs <container>
+```
+
+### Show docker version
+
+```shell
 docker version
+```
 
-# delete all docker containers
+### Delete all docker containers
+
+```shell
 docker rm $(docker ps -aq)
+```
 
-# create a volume container
-docker create -v /shared-data --name shared-data-container alpine true
+### Commit changes
 
-# committing changes
+```shell
 docker commit -m "<message>" [-a "<author>"] <container> <user>/<repo>:<label>
+```
+
+### Update existing container to start on system boot
+
+```shell
+ docker update --restart=always <container>
+```
+
+## Working with volumes
+
+### Create a volume container
+
+```shell
+docker create -v /shared-data --name shared-data-container alpine true
+```
+
+### Create a container using volumes from a volume container
+
+```shell
+docker run [-ti] --volumes-from <volume container> <image> [command]
+```
