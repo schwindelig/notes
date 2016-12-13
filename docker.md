@@ -68,6 +68,12 @@ docker rm $(docker ps -aq)
 docker commit -m "<message>" [-a "<author>"] <container> <user>/<repo>:<label>
 ```
 
+### Run new container, specifying to restart on system boot
+
+```shell
+doker run --restart=always <image> [command]
+```
+
 ### Update existing container to start on system boot
 
 ```shell
