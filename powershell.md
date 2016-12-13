@@ -166,6 +166,16 @@ see https://msdn.microsoft.com/powershell/reference/5.1/Microsoft.PowerShell.Uti
 
 [todo]
 
+## Network
+
+### Testing network connection
+
+```powershell
+Test-NetConnection
+```
+
+See [technet](https://technet.microsoft.com/en-us/library/dn372891.aspx) for additional parameters.
+
 ## Toolmaking with PowerShell
 
 ### Chaining Commands
