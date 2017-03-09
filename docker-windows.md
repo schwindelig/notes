@@ -56,3 +56,19 @@ Pull Nano server
 ```powershell
 docker pull microsoft/nanoserver
 ```
+
+Run containers
+This will open the prompt on the nano server
+```powershell
+docker run -ti microsoft/nanoserver cmd
+```
+
+Check the hostname
+```powershell
+hostname
+```
+
+Exit the containers
+```powershell
+Exit
+```
