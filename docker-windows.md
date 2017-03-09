@@ -1,5 +1,8 @@
 # Windows Containers (for Windows 10)
 
+Warning: It seems like there is now an alternative way for switching "normal" and windows containers by using the default docker installer 
+See https://docs.microsoft.com/en-us/aspnet/mvc/overview/deployment/docker-aspnetmvc for more information.
+
 ## Installation
 See:
 - https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10
@@ -51,6 +54,10 @@ Start-Service Docker
 ```
 
 ## Verification
+
+There are several images on microsoft's docker hub repository we can use for testing. See https://hub.docker.com/u/microsoft/
+
+### Using Nano Server
 
 Pull Nano server
 ```powershell
