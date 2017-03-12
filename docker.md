@@ -82,7 +82,7 @@ doker run --restart=always <image> [command]
 
 ### Get IP of container
 ```shell
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" my-running-site
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" <container>
 ```
 
 ## Working with volumes
