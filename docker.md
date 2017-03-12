@@ -80,6 +80,11 @@ doker run --restart=always <image> [command]
  docker update --restart=always <container>
 ```
 
+### Get IP of container
+```shell
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" my-running-site
+```
+
 ## Working with volumes
 
 ### Create a volume container
