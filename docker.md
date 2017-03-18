@@ -55,8 +55,12 @@ docker logs <container>
 ```shell
 docker version
 ```
+### Stop all containers
+```shell
+docker stop $(docker ps -a -q)
+```
 
-### Delete all docker containers
+### Delete all containers
 
 ```shell
 docker rm $(docker ps -aq)
