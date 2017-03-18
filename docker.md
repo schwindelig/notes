@@ -61,6 +61,10 @@ docker version
 ```shell
 docker rm $(docker ps -aq)
 ```
+### Delete all images
+```shell
+docker rmi $(docker images -q)
+```
 
 ### Commit changes
 
