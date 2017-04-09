@@ -1,6 +1,22 @@
-# Windows Containers
+# Windows Containers (for Windows 10)
+
+Warning: It seems like there is now an alternative way for switching "normal" and windows containers by using the default docker installer 
+See https://docs.microsoft.com/en-us/aspnet/mvc/overview/deployment/docker-aspnetmvc for more information.
 
 ## Installation
+Download Docker for windows here https://docs.docker.com/docker-for-windows/install/ (or use chocolatey)
+
+In the installation directory of docker run
+```powershell
+.\DockerCli -SwitchDaemon
+```
+This will switch to windows container mode
+
+
+### The easy peasy way
+See: https://docs.microsoft.com/en-us/aspnet/mvc/overview/deployment/docker-aspnetmvc
+
+### Legacy instructions
 See:
 - https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10
 - https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-server
@@ -52,7 +68,27 @@ Start-Service Docker
 
 ## Verification
 
+There are several images on microsoft's docker hub repository we can use for testing. See https://hub.docker.com/u/microsoft/
+
+### Using Nano Server
+
 Pull Nano server
 ```powershell
 docker pull microsoft/nanoserver
+```
+
+Run containers
+This will open the prompt on the nano server
+```powershell
+docker run -ti microsoft/nanoserver cmd
+```
+
+Check the hostname
+```powershell
+hostname
+```
+
+Exit the containers
+```powershell
+Exit
 ```
