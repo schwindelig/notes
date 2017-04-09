@@ -55,11 +55,19 @@ docker logs <container>
 ```shell
 docker version
 ```
+### Stop all containers
+```shell
+docker stop $(docker ps -a -q)
+```
 
-### Delete all docker containers
+### Delete all containers
 
 ```shell
 docker rm $(docker ps -aq)
+```
+### Delete all images
+```shell
+docker rmi $(docker images -q)
 ```
 
 ### Commit changes
@@ -78,6 +86,11 @@ doker run --restart=always <image> [command]
 
 ```shell
  docker update --restart=always <container>
+```
+
+### Get IP of container
+```shell
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" <container>
 ```
 
 ## Working with volumes
