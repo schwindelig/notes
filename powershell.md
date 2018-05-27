@@ -176,6 +176,12 @@ Test-NetConnection
 
 See [technet](https://technet.microsoft.com/en-us/library/dn372891.aspx) for additional parameters.
 
+### Testing network connection on specific port
+
+```powershell
+Test-NetConnection localhost -port 5672
+```
+
 ## Toolmaking with PowerShell
 
 ### Chaining Commands
